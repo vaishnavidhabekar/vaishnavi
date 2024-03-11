@@ -1,17 +1,147 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-title color="primary"> {{profileDetails.heading}} </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<ion-content>
+  <ion-card class="profile-logo">
+    
+      <img
+        alt="vaishnavi"
+        src="https://media.licdn.com/dms/image/D5603AQGrfMW0igAQwA/profile-displayphoto-shrink_200_200/0/1692728882914?e=2147483647&v=beta&t=dNca6V2coK3qacIkTN3AXf5dRTM03mbZUsoI92uItjk"
+      />
+  </ion-card>
+  <ion-text class="ion-text-center" class="profile-text"> {{profileDetails.name}}</ion-text>
+  <ion-accordion-group>
+    <ion-accordion value="first">
+      <ion-item slot="header" color="primary">
+        <ion-label>{{profileDetails.personalDetails.heading}}</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-list>
+          <ion-item>
+            <ion-label
+              >{{profileDetails.personalDetails.age.label}}:{{profileDetails.personalDetails.age.value}}</ion-label
+            >
+          </ion-item>
+          <ion-item>
+            <ion-label
+              >{{profileDetails.personalDetails.address.label}}:{{profileDetails.personalDetails.address.value}}</ion-label
+            >
+          </ion-item>
+          <ion-item>
+            <ion-label
+              >{{profileDetails.personalDetails.gender.label}}:{{profileDetails.personalDetails.gender.value}}</ion-label
+            >
+          </ion-item>
+          <ion-item>
+            <ion-label
+              >{{profileDetails.personalDetails.DOB.label}}:{{profileDetails.personalDetails.DOB.value}}</ion-label
+            >
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="second">
+      <ion-item slot="header" color="primary">
+        <ion-label>{{profileDetails.contacts.heading}}</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-list>
+          <ion-item>
+            <ion-label
+              >{{profileDetails.contacts.mobile.label}}:<a href="tel:{{profileDetails.contacts.mobile.value}}"> {{profileDetails.contacts.mobile.value}}</a></ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label><a href="">
+             {{profileDetails.contacts.email.label}}:{{profileDetails.contacts.email.value}} </a></ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              {{profileDetails.contacts.linkedIn.label}}:<a href="{{profileDetails.contacts.linkedIn.value}}" target="_blank">{{profileDetails.contacts.linkedIn.value}}</a></ion-label
+            >
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="third">
+      <ion-item slot="header" color="primary">
+        <ion-label>{{profileDetails.education.heading}}</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-list>
+          <ion-item>
+            <ion-label
+              >{{profileDetails.education.degree.label}}:{{profileDetails.education.degree.value}}</ion-label
+            >
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              {{profileDetails.education.branch.label}}:{{profileDetails.education.branch.value}}</ion-label
+            >
+          </ion-item>
+          <ion-item>
+            <ion-label
+              >{{profileDetails.education.university.label}}:{{profileDetails.education.university.value}}</ion-label
+            >
+          </ion-item>
+          <ion-item>
+            <ion-label
+              >{{profileDetails.education.collage.label}}:{{profileDetails.education.collage.value}}</ion-label
+            >
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="forth">
+      <ion-item slot="header" color="primary">
+        <ion-label>{{profileDetails.skills.heading}}</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-list-header>
+          <ion-label>{{profileDetails.skills.skills.label}}</ion-label>
+        </ion-list-header>
+        <ion-list>
+          <ion-item *ngFor="let item of profileDetails.skills.skills.value">
+            <ion-label>{{item}}</ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="fifth">
+      <ion-item slot="header" color="primary">
+        <ion-label>{{profileDetails.projects.heading}}</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-list>
+          <ion-item>
+            <ion-label
+              >{{profileDetails.projects.miniProject.name}}:{{profileDetails.projects.miniProject.technology}}</ion-label
+            >
+          </ion-item>
+          <ion-item>
+            <ion-label
+              >{{profileDetails.projects.meghaProject.name}}:{{profileDetails.projects.meghaProject.technology}}</ion-label
+            >
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="sisth">
+      <ion-item slot="header" color="primary">
+        <ion-label>{{profileDetails.languages.heading}}</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-list-header>
+          <ion-label>{{profileDetails.languages.language.label}}</ion-label>
+        </ion-list-header>
+        <ion-list>
+          <ion-item *ngFor="let item of profileDetails.languages.language.value">
+            <ion-label>{{item}}</ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
 </ion-content>
