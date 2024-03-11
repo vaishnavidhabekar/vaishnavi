@@ -1,9 +1,9 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title color="primary"> {{profileDetails.heading}} </ion-title>
+  <ion-toolbar >
+    <ion-title color="dark"> {{profileDetails.name}} </ion-title>
     <ion-button slot="end" fill="clear">
       <a download target="_blank" href="assets/pdf/Resume.pdf">
-        <ion-icon size="large" name="download-outline"></ion-icon>
+        <ion-icon color="dark" size="large" name="download-outline"></ion-icon>
       </a>
     </ion-button>
   </ion-toolbar>
@@ -16,12 +16,11 @@
       src="https://media.licdn.com/dms/image/D5603AQGrfMW0igAQwA/profile-displayphoto-shrink_200_200/0/1692728882914?e=2147483647&v=beta&t=dNca6V2coK3qacIkTN3AXf5dRTM03mbZUsoI92uItjk"
     />
   </ion-card>
-  <ion-text class="ion-text-center" class="profile-text">
-    {{profileDetails.name}}</ion-text
-  >
+  <!-- <ion-text class="ion-text-center" class="profile-text">
+    {{profileDetails.name}}</ion-text>    -->
   <ion-accordion-group>
     <ion-accordion value="first">
-      <ion-item slot="header" color="primary">
+      <ion-item slot="header" color="secondary">
         <ion-label>{{profileDetails.personalDetails.heading}}</ion-label>
       </ion-item>
       <div class="ion-padding" slot="content">
@@ -50,7 +49,7 @@
       </div>
     </ion-accordion>
     <ion-accordion value="second">
-      <ion-item slot="header" color="primary">
+      <ion-item slot="header" color="secondary">
         <ion-label>{{profileDetails.contacts.heading}}</ion-label>
       </ion-item>
       <div class="ion-padding" slot="content">
@@ -88,7 +87,7 @@
       </div>
     </ion-accordion>
     <ion-accordion value="third">
-      <ion-item slot="header" color="primary">
+      <ion-item slot="header" color="secondary">
         <ion-label>{{profileDetails.education.heading}}</ion-label>
       </ion-item>
       <div class="ion-padding" slot="content">
@@ -117,7 +116,7 @@
       </div>
     </ion-accordion>
     <ion-accordion value="forth">
-      <ion-item slot="header" color="primary">
+      <ion-item slot="header" color="secondary">
         <ion-label>{{profileDetails.skills.heading}}</ion-label>
       </ion-item>
       <div class="ion-padding" slot="content">
@@ -132,7 +131,7 @@
       </div>
     </ion-accordion>
     <ion-accordion value="fifth">
-      <ion-item slot="header" color="primary">
+      <ion-item slot="header" color="secondary">
         <ion-label>{{profileDetails.projects.heading}}</ion-label>
       </ion-item>
       <div class="ion-padding" slot="content">
@@ -151,7 +150,7 @@
       </div>
     </ion-accordion>
     <ion-accordion value="sisth">
-      <ion-item slot="header" color="primary">
+      <ion-item slot="header" color="secondary">
         <ion-label>{{profileDetails.languages.heading}}</ion-label>
       </ion-item>
       <div class="ion-padding" slot="content">
