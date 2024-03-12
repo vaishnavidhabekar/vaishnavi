@@ -1,0 +1,8 @@
+<ion-list-header>
+  <ion-label>{{profileDetails.skills.skills.label}}</ion-label>
+</ion-list-header>
+<ion-list>
+  <ion-item *ngFor="let item of profileDetails.skills.skills.value">
+    <ion-label>{{item}}</ion-label>
+  </ion-item>
+</ion-list>
