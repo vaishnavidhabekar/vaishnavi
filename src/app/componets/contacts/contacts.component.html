@@ -1,0 +1,31 @@
+<ion-list>
+  <ion-item>
+    <ion-label
+      >{{profileDetails.contacts.mobile.label}}:<a
+        href="tel:{{profileDetails.contacts.mobile.value}}"
+      >
+        {{profileDetails.contacts.mobile.value}}</a
+      ></ion-label
+    >
+  </ion-item>
+  <ion-item>
+    <ion-label
+      >
+        {{profileDetails.contacts.email.label}}: <a
+        href="mailto:email@example.com:{{profileDetails.contacts.email.value}}">
+        {{profileDetails.contacts.email.value}}
+      </a>
+
+      </ion-label
+    >
+  </ion-item>
+  <ion-item>
+    <ion-label>
+      {{profileDetails.contacts.linkedIn.label}}:<a
+        href="{{profileDetails.contacts.linkedIn.value}}"
+        target="_blank"
+        >{{profileDetails.contacts.linkedIn.value}}</a
+      ></ion-label
+    >
+  </ion-item>
+</ion-list>

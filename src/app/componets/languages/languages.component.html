@@ -1,0 +1,10 @@
+<ion-list-header>
+  <ion-label>{{profileDetails.languages.language.label}}</ion-label>
+</ion-list-header>
+<ion-list>
+  <ion-item
+    *ngFor="let item of profileDetails.languages.language.value"
+  >
+    <ion-label>{{item}}</ion-label>
+  </ion-item>
+</ion-list>
