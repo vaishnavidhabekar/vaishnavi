@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  
+  constructor(){}
+
+  path(path?: string) {
+  }
+  public open(path?: string) {
+    alert(path);
+    //this.nav.navigateForward('about')  
+  } 
 }
