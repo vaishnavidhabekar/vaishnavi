@@ -1,33 +1,32 @@
 <ion-app>
-  <ion-menu contentId="main-content"  >
+  <ion-menu contentId="main-content">
     <ion-header>
-      <ion-card  class="hide-card">
+      <ion-card class="hide-card">
         <img src="assets\icon\IMG_20220619_204149.jpg" class="custom-avatar" />
-        <h4 style="text-align: center;"><b>Vaishnavi Dhabekar</b></h4>
+        <h4 style="text-align: center"><b>Vaishnavi Dhabekar</b></h4>
+        <ion-icon class="custom-margin" name="logo-linkedin"></ion-icon>
+        <ion-icon class="custom-margin" name="logo-facebook"></ion-icon>
+        <ion-icon class="custom-margin" name="logo-instagram"></ion-icon>
+
+        <a target="_blank" href="#">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
       </ion-card>
     </ion-header>
     <ion-content class="ion-padding">
       <ion-list>
-          <ion-item (click)="open('home')"   routerLinkActive='home' [routerLinkActiveOptions]="{exact: true}">
-            <ion-icon name="home-outline"></ion-icon>
-            <ion-label>Home</ion-label>
-          </ion-item>
-          <ion-item (click)="open('about')" routerLinkActive='./pages/about/about.module' [routerLinkActiveOptions]="{exact: true}" >
-            <ion-icon name="accessibility-outline"></ion-icon>
-            <ion-label>About</ion-label>
-          </ion-item>
-          <ion-item (click)="open('resume')" routerLinkActive='./pages/resume/resume.module' [routerLinkActiveOptions]="{exact: true}" >
-            <ion-icon name="save-outline"></ion-icon>
-            <ion-label>Resume</ion-label>
-          </ion-item>
-          <ion-item (click)="open('contact')" routerLinkActive='./pages/contact/contact.module' [routerLinkActiveOptions]="{exact: true}">
-            <ion-icon name="person-outline"></ion-icon>
-            <ion-label>Contact</ion-label>
-          </ion-item>
-        </ion-list>
-      </ion-content>
-    </ion-menu>
-    <div class="ion-page text-center" id="main-content">
-      <ion-router-outlet></ion-router-outlet>
-    </div>
+        <!-- {{menulist|json}} -->
+        <ion-item
+          *ngFor="let item of menulist"
+          (click)="open(item.routerLinkActive)"
+        >
+          <ion-icon name="{{ item.iconName }}"></ion-icon>
+          <ion-label>{{ item.label }}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <div class="ion-page text-center" id="main-content">
+    <ion-router-outlet></ion-router-outlet>
+  </div>
 </ion-app>

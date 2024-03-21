@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Profile } from 'src/app/constants/app-constant';
 
 @Component({
   selector: 'app-resume',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./resume.page.scss'],
 })
 export class ResumePage implements OnInit {
+  public profileDetails = Profile;
 
   constructor() { }
 
