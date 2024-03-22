@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Profile } from 'src/app/constants/app-constant';
 
 @Component({
   selector: 'app-contact',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.page.scss'],
 })
 export class ContactPage implements OnInit {
-
+  public profileDetails = Profile;
   constructor() { }
 
   ngOnInit() {

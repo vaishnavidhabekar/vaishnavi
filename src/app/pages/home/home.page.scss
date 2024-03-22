@@ -4,6 +4,11 @@ ion-content {
     background-position: center; 
 }
 
-ion-content.background{
-    --background: url(../../../assets/icon/IMG_20211015_203546.jpg) 0 0/100% 100% no-repeat;
+.background{
+    --background: url(../../../assets/icon/IMG_20211015_203546.jpg) 0 0/100% 100% no-repeat !important;
 }
+
+.center {
+    margin-top: 40%;
+    color:#008DDA;
+  }

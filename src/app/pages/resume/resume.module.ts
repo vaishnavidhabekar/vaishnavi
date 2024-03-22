@@ -7,6 +7,12 @@ import { IonicModule } from '@ionic/angular';
 import { ResumePageRoutingModule } from './resume-routing.module';
 
 import { ResumePage } from './resume.page';
+import { LanguagesComponent } from 'src/app/componets/languages/languages.component';
+import { ProjectsComponent } from 'src/app/componets/projects/projects.component';
+import { SkillsComponent } from 'src/app/componets/skills/skills.component';
+import { EducationComponent } from 'src/app/componets/education/education.component';
+import { ContactsComponent } from 'src/app/componets/contacts/contacts.component';
+import { PersonalDetailsComponent } from 'src/app/componets/personal-details/personal-details.component';
 
 @NgModule({
   imports: [
@@ -15,6 +21,6 @@ import { ResumePage } from './resume.page';
     IonicModule,
     ResumePageRoutingModule
   ],
-  declarations: [ResumePage]
+  declarations: [ResumePage,PersonalDetailsComponent,ContactsComponent,EducationComponent,SkillsComponent,ProjectsComponent,LanguagesComponent]
 })
 export class ResumePageModule {}
