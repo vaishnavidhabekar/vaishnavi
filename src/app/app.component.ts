@@ -30,6 +30,24 @@ export class AppComponent {
       routerLinkActive:'/contact'
     },
   ];
+  public linklist = [
+    {
+    name :'logo-linkedin',
+    url:'https://www.linkedin.com/in/vaishnavi-dhabekar-09743b22b'
+    },
+    {
+    name :'logo-facebook',
+    url:'https://ro-ro.facebook.com/vaishnavi.dhabekar.9/'
+    },
+    {
+    name :'logo-instagram',
+    url:'https://www.linkedin.com/in/vaishnavi-dhabekar-09743b22b'
+    },
+    {
+    name :'logo-twitter',
+    url:'https://www.linkedin.com/in/vaishnavi-dhabekar-09743b22b'
+    },
+];
   constructor(public route: Router, public menu:MenuController) {}
 
  

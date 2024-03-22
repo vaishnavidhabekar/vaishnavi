@@ -1,19 +1,18 @@
 <ion-app>
   <ion-menu contentId="main-content">
-    <ion-header>
+    <ion-header class="ion-header">
       <ion-card class="hide-card">
         <img src="assets\icon\IMG_20220619_204149.jpg" class="custom-avatar" />
         <h4 style="text-align: center"><b>Vaishnavi Dhabekar</b></h4>
-        <ion-icon class="custom-margin" name="logo-linkedin"></ion-icon>
-        <ion-icon class="custom-margin" name="logo-facebook"></ion-icon>
-        <ion-icon class="custom-margin" name="logo-instagram"></ion-icon>
-
-        <a target="_blank" href="#">
-          <ion-icon name="logo-twitter"></ion-icon>
-        </a>
+        <a target="_blank"  *ngFor="let item of linklist" href="{{item.url}}">
+          <ion-icon
+            name="{{ item.name }}"
+            class="custom-margin"
+          ></ion-icon
+        ></a>
       </ion-card>
     </ion-header>
-    <ion-content class="ion-padding">
+    <ion-content>
       <ion-list>
         <!-- {{menulist|json}} -->
         <ion-item

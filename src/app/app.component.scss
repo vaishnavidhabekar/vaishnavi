@@ -12,13 +12,17 @@
   margin-right: auto;
 }
 
-
-  ion-card {
+   ion-card {
     --background: var(--ion-color-light-background);
+  }
+.ion-header{
+    background-color: #F7EEDD;
   }
  
  .custom-margin{
-
-  margin: 27px;
+  height: 22px;
+  width: 22px;
+  margin: 23px;
 
  } 
+ 
