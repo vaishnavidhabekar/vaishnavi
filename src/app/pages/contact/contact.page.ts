@@ -14,4 +14,3 @@ export class ContactPage implements OnInit {
   }
 
 }
-
