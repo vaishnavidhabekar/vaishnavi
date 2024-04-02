@@ -3,32 +3,64 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>contact</ion-title>
+    <ion-title>Contact</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
     <ion-item>
-      <ion-label>{{profileDetails.contacts.mobile.label}}:
-        <a href="tel:{{profileDetails.contacts.mobile.value}}">{{profileDetails.contacts.mobile.value}}</a>
+      <ion-label
+        >{{profileDetails.contacts.mobile.label}}:
+        <a href="tel:{{profileDetails.contacts.mobile.value}}"
+          >{{profileDetails.contacts.mobile.value}}</a
+        >
       </ion-label>
     </ion-item>
     <ion-item>
       <ion-label>
         {{profileDetails.contacts.email.label}}:
-        <a href="mailto:email@example.com:{{profileDetails.contacts.email.value}}">{{profileDetails.contacts.email.value}}</a>
+        <a
+          href="mailto:email@example.com:{{profileDetails.contacts.email.value}}"
+          >{{profileDetails.contacts.email.value}}</a
+        >
       </ion-label>
     </ion-item>
   </ion-list>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title></ion-card-title>
-      <ion-card-subtitle>Reactive forms</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      
-    </ion-card-content>
-  </ion-card>
+  <div class="topMargin">
+    <ion-text>Please Fill The Form To Reach Out</ion-text>
+    <form [formGroup]="contactForm">
+      <ion-list>
+        <ion-item>
+          <ion-label position="floating">Name</ion-label>
+          <ion-input type="text" formControlName="name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="email" formControlName="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Subject</ion-label>
+          <ion-input type="text" formControlName="subject"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Message</ion-label>
+          <ion-textarea formControlName="message"></ion-textarea>
+        </ion-item>
+      </ion-list>
+    </form>
+  </div>
 </ion-content>
+<ion-footer>
+  <ion-button
+    fill="solid"
+    expand="full"
+    (click)="submitRespose()"
+    type="submit"
+    [disabled]="!contactForm.valid"
+    >Submit</ion-button
+  >
+</ion-footer>
