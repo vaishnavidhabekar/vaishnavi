@@ -17,7 +17,7 @@ export class ContactPage implements OnInit {
 
   public contactForm: FormGroup;
 
-  constructor(private fb: FormBuilder, public toastController:ToastController) {
+  constructor(private fb: FormBuilder, public toastController:ToastController ) {
     this.contactForm = this.fb.group({
       name: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
@@ -29,6 +29,7 @@ export class ContactPage implements OnInit {
     
   }
   async submitRespose(){
+    console.log(this.contactForm.value);
  
     const toast = await this.toastController.create({
       
@@ -37,7 +38,7 @@ export class ContactPage implements OnInit {
       buttons:["ok"]
     });
     await toast.present();
-  
+    
   }
  
 }
