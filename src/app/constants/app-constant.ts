@@ -9,7 +9,7 @@ export const Profile = {
     },
     address: {
       label: 'Address',
-      value: 'Sahakar Nager Rani laxmi Bai ward Khat Road, Bhandara',
+      value: 'Sahakar Nager Rani laxmi Bai Ward Khat Road, Bhandara',
     },
     gender: {
       label: 'Gender',
@@ -58,7 +58,7 @@ export const Profile = {
     heading: 'Skills',
     skills: {
       label: 'Programming Languages',
-      value: ['C language', 'C++', 'JAVA', 'PHP'],
+      value: ['HTML5', 'CSS3','JavaScript' ,'Oracle', 'Java','Python'],
     },
   },
   projects: {
@@ -76,7 +76,7 @@ export const Profile = {
     heading: 'Languages',
     language: {
       label: 'Languages',
-      value: ['Marathi','Hindi','English'],
+      value: ['English','Hindi','Marathi'],
     },
   },
 }
